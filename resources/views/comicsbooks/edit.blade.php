@@ -6,7 +6,7 @@
 <main>
 
     <div class="container">
-        <form action="{{ route('comicsbooks.store') }}" method="POST">
+        <form action="{{ route('comicsbooks.update', $comicsbook) }}" method="POST">
             @csrf
             @method('PUT')
     

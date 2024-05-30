@@ -63,16 +63,23 @@ class ComicbookController extends Controller
     // /**
     //  * Update the specified resource in storage.
     //  */
-    // public function update(Request $request, string $id)
-    // {
-    //     //
-    // }
+    public function update(Request $request, Comicbook $comicsbook)
+    {
+        $form_data = $request->all();
+
+        $comicsbook->update($form_data);
+
+        return to_route('comicsbooks.show', $comicsbook);
+
+    }
 
     // /**
     //  * Remove the specified resource from storage.
     //  */
-    // public function destroy(string $id)
-    // {
-    //     //
-    // }
+    public function destroy(Comicbook $comicsbook)
+    {
+        $comicsbook->delete();
+
+        return to_route('comicsbooks.index');
+    }
 }

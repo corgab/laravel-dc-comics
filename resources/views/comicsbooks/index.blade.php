@@ -6,7 +6,10 @@
 <main>
     <section>
         <div class="container">
-            <h1 class="text-center">index comicsbooks</h1>
+            <div class="text-center">
+                <h1>index comicsbooks</h1>
+                <a href="{{ route('comicsbooks.create')}}" class="fs-3">Nuovo Libro</a>
+            </div>
             <table class="table">
                 <thead>
                   <tr>

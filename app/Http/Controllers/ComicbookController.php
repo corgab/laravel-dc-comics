@@ -30,8 +30,18 @@ class ComicbookController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dump('Metodo store');
+
+        $form_data = $request->all();
+
+        $new_book = new Comicbook();
+
+        $new_book->title = $form_data['title'];
+        $new_book->description = $form_data['description'];
+        $new_book->sale_date = $form_data['sale_date'];
+
+        $new_book->save();
+
+        return redirect()->route('comicsbooks.index');
     }
 
     /**
@@ -45,10 +55,10 @@ class ComicbookController extends Controller
     // /**
     //  * Show the form for editing the specified resource.
     //  */
-    // public function edit(string $id)
-    // {
-    //     //
-    // }
+    public function edit(Comicbook $comicsbook)
+    {
+        return view('comicsbooks.edit', compact('comicsbook'));
+    }
 
     // /**
     //  * Update the specified resource in storage.

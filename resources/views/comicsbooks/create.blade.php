@@ -11,7 +11,7 @@
     
             <div class="mb-3">
                 <label for="title" class="form-label">title</label>
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="title" id="title" class="form-control">
             </div>
     
             <div class="mb-3">
@@ -23,7 +23,7 @@
                 <label for="sale_date" class="form-label">sale date</label>
                 <input type="text" name="sale_date" id="sale_date" class="form-control">
             </div>
-            <button class="btn btn-primary">invia!</button>
+            <button class="btn btn-primary">invia</button>
         </form>
     </div>
 

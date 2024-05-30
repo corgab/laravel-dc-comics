@@ -14,7 +14,9 @@ use App\Http\Controllers\ComicbookController;
 |
 */
 
-Route::get('/comicsbooks', [ComicbookController::class, 'index'])->name('comicsbooks.index');
-Route::get('/comicsbooks/create', [ComicbookController::class, 'create'])->name('comicsbooks.create');
-Route::get('/comicsbooks/{comicsbook}', [ComicbookController::class, 'show'])->name('comicsbooks.show');
-Route::post('/comicsbooks', [ComicbookController::class, 'store'])->name('comicsbooks.store');
+// Route::get('/comicsbooks', [ComicbookController::class, 'index'])->name('comicsbooks.index');
+// Route::get('/comicsbooks/create', [ComicbookController::class, 'create'])->name('comicsbooks.create');
+// Route::get('/comicsbooks/{comicsbook}', [ComicbookController::class, 'show'])->name('comicsbooks.show');
+// Route::post('/comicsbooks', [ComicbookController::class, 'store'])->name('comicsbooks.store');
+
+Route::resource('comicsbooks', ComicbookController::class);
